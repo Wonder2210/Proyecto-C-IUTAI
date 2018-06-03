@@ -17,7 +17,12 @@ int main(int argc, char const *argv[]) {
 
   }
   while(a==1){
-
+    cout<<"---------------------"<<endl;
+    cout<<"|      Ventas       |"<<endl;
+    cout<<"|                   |"<<endl;
+    cout<<"---------------------"<<endl;
+    cout<<""<<endl;
+    cout<<""<<endl;
   }
   return 0;
 }
