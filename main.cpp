@@ -8,7 +8,13 @@ int main(int argc, char const *argv[]) {
   int a;
   cin>>a;
   while (a==0){
-    
+    cout<<"---------------------"<<endl;
+    cout<<"|  Registro         |"<<endl;
+    cout<<"|     y control     |"<<endl;
+    cout<<"---------------------"<<endl;
+    cout<<""<<endl;
+    cout<<""<<endl;
+
   }
   while(a==1){
 
