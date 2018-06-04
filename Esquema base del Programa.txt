@@ -1,0 +1,59 @@
+- Paso a Paso de cosas a hacer para el programa
+
+->Menú para la opción de Inventario y Tienda<-
+
+
+			-> Inventario <-
+	
+1-> Registro
+2-> Revisión
+
+-> Registro de Invetario <-
+
+	1-> Añadir producto
+	2-> Cantidad de productos en el invetario
+	3-> Precio del producto (Por unidad)
+	4-> Precio del producto (Al mayor)
+
+-> Revisión de Inventario <-
+
+	1-> Lista completa el inventario
+		.> Cantidad actual
+	2-> Busqueda de un producto en especifico
+		.> Cantidad actual
+
+
+			-> Tienda <-
+
+
+-> Atención al cliente <-
+	
+	1-> Registro de Nombre del cliente.
+	2-> C.I Del cliente
+	3-> Número Teléfonico del cliente
+
+		->Ciclo de Compra<-
+
+	4-> Producto a llevar
+	5-> Cantidad a llevar
+		     -><-
+	
+	6-> Precio neto de la compra
+	7-> Precio con IVA.
+	8-> Culimnar transacción
+
+-> Facturación <-
+
+	Mostrar:
+		1-> Nombre del cliente
+		2-> C.I del cliente
+		
+			->Ciclo de producto<-
+		3-> Producto llevado
+		4-> Canntidad llevada
+			-><-
+		
+		6-> Precio neto de la compra
+		7-> Precio con IVA.	
+
+	
