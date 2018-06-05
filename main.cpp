@@ -24,43 +24,23 @@ int main(int argc, char const *argv[]) {
       precio[i][0]=0.0;
       precio[i][1]=0.0;
       inventario[i]=0;
-      cout<<"Digite El nombre del articulo";
+      cout<<"Digite El nombre del articulo"<<endl;
       cin>>nombre_art[i];
-      cout<<"Digite El precio al detal del articulo";
+      cout<<"Digite El precio al detal del articulo"<<endl;
       cin>>precio[i][0];
-      cout<<"Digite El precio al mayor del articulo";
+      cout<<"Digite El precio al mayor del articulo"<<endl;
       cin>>precio[i][1];
-      cout<<"Digite La cantidad en existencia del articulo";
+      cout<<"Digite La cantidad en existencia del articulo"<<endl;
       cin>>inventario[i];
   }
     cout<<" Nombre  Precio al Mayor   Precio al detal  Existencias  "<<endl;
      cout<<"──────  ───────────────   ───────────────  ───────────"<<endl;
   for(i =0;i<a;i++){
-      cout<<nombre_art[i]<<""<<precio[i][0]<<"  "<<precio[i][1]<<""<<inventario[i]<<endl;
+      cout<<nombre_art[i]<<"        "<<precio[i][0]<<"       "<<precio[i][1]<<"        "<<inventario[i]<<endl;
 
   }
 
-  while (a==0){
-    cout<<"---------------------"<<endl;
-    cout<<"|   Inventario      |"<<endl;
-    cout<<"|                   |"<<endl;
-    cout<<"---------------------"<<endl;
-    cout<<""<<endl;
-    cout<<""<<endl;
-    cout<<"    Presione:        "<<endl;
-    
-
-    
-
-  }
-  while(a==1){
-    cout<<"---------------------"<<endl;
-    cout<<"|      Tienda       |"<<endl;
-    cout<<"|                   |"<<endl;
-    cout<<"---------------------"<<endl;
-    cout<<""<<endl;
-    cout<<""<<endl;
-  }
+  
   return 0;
 }
 
