@@ -6,7 +6,7 @@ int main()
 {
 	char res;
 	int Regis = 0, IoV = 0, MI = 0, ResI = 0, RegisI = 0,cedula=0,telf=0;
-	int i = 0, j = 0, a = 0, in = 0,b=0,bb=0,number=0,nm=0;
+	int i = 0,jr=0, j = 0, a = 0, in = 0,b=0,s=0,bb=0,number=0,nm=0,nmm=0,nms=0;
 	string name="gdgd",nombre="    ";
 	float total=0.0,total_t=0.0;
 
@@ -107,7 +107,7 @@ int main()
 				}
 
 				cout << "¿Desea ver el inventario o regresar al menu principal?" << endl;
-				cout << " Inventario [1]                    Menú [2]            " << endl;
+				cout << " Inventario [1]                               " << endl;
 				cin >> ResI;
 				cout << endl;
 
@@ -123,6 +123,8 @@ int main()
 
 
 			     }
+			     cout<<"Presione r para ir a la seccion de ventas"<<endl;
+			     cin>>res;
 				}
 				else
 				{
@@ -140,8 +142,9 @@ int main()
 				{
 					cout << nombre_art[i] << "" << precio[i][0] << "  " << precio[i][1] << "" << inventario[i] << endl;
 
-				break;
+
 			}
+			break;
 
 			}
 
@@ -152,7 +155,7 @@ int main()
 
 	}while (res == 's');
 
-
+MI=0;
 
 while(j==0){
     cout << "---------------------" << endl;
@@ -174,12 +177,12 @@ while(j==0){
 
     cout<<"Ingrese el numero del articulo"<<endl;
     cout<<"_____________________________"<<endl;
-    for(i=0;i<(b/2);i++){
-        cout<<"|"<<nombre[i]<<" numero"<<i+1<<" :Precio al detal"<<precio[i][0]<<" precio al mayor:"<<precio[i][1]<<"|"<<endl;
+    for(i=0;i<b;i++){
+        cout<<"|  "<<nombre[i]<<" numero "<<i+1<<"  Precio al detal"<<precio[i][0]<<" precio al mayor:"<<precio[i][1]<<"|"<<endl;
     }
     cout<<"_____________________________"<<endl;
 
-    while(j==0){
+    while(s==0){
         cin>>number;
         cout<<"Ingrese el numero de unidades a llevar"<<endl;
         cin>>nm;
@@ -206,8 +209,46 @@ while(j==0){
     cout<<"Total a pagar:"<<total<<endl;
     cout<<"Total a pagar con iva:"<<total*1.12<<endl;
 
+
+    cout<<"Presione 1 para ver el inventario"<<endl;
+    cin>>jr;
+    if(jr==1){
+        cout << "	---------------------" << endl;
+			cout << "	|   Inventario      |" << endl;
+			cout << "	---------------------" << endl;
+			cout << "" << endl;
+
+			cout << "¿Qué operación desea realizar?" << endl;
+			cout << "agregar existencias[1]  Revisión de Inventario[2]" << endl;
+			cin >> MI;
+			if(MI==1){
+                cout<<"_____________________________"<<endl;
+                for(i=0;i<b;i++){
+                    cout<<"|  "<<nombre[i]<<" numero "<<i+1<<"  Precio al detal"<<precio[i][0]<<" precio al mayor:"<<precio[i][1]<<"|"<<endl;
+                }
+                cout<<"_____________________________"<<endl;
+                cout<<"Introduzca el numero del articulo a agregarle existencias"<<endl;
+                cin>>nmm;
+                cout<<"Introduzca las existencias a añadir"<<endl;
+                cin>>nms;
+                inventario[nmm-1]+=nms;
+			}
+			if(MI==2){
+
+					cout << " Nombre  Precio al Mayor   Precio al detal  Existencias  " << endl;
+				cout << "------  ---------------   ---------------  -----------" << endl;
+
+				for (i = 0; i < bb; i++)
+				{
+					cout << nombre_art[i] << "      " << precio[i][0] << "         " << precio[i][1] << "        " << inventario[i] << endl;
+
+
+			     }
+			}
+    }
     cout<<"Presione 0 para seguir vendiendo"<<endl;
     cin>>j;
+
 }
 return 0;
 }
