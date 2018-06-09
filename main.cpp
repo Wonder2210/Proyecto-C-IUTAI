@@ -1,12 +1,14 @@
 #include <iostream>
-#include <stdlib.h>
+#include <string>
 using namespace std;
 
 int main()
 {
 	char res;
-	int Regis = 0, IoV = 0, MI = 0, ResI = 0, RegisI = 0;
-	int i = 0, j = 0, a = 0, in = 0;
+	int Regis = 0, IoV = 0, MI = 0, ResI = 0, RegisI = 0,cedula=0,telf=0;
+	int i = 0, j = 0, a = 0, in = 0,b=0,bb=0,number=0,nm=0;
+	string name="gdgd",nombre="    ";
+	float total=0.0,total_t=0.0;
 
 	do
 	{
@@ -31,10 +33,7 @@ int main()
 			IoV = 1;
 		}
 
-		switch (IoV)
-		{
 
-		case 1:
 
 			cout << "	---------------------" << endl;
 			cout << "	|   Inventario      |" << endl;
@@ -56,19 +55,27 @@ int main()
 				cout << "Será llevado al sistema de registro. . ." << endl;
 				cout << "" << endl;
 				MI = 1;
+				res='r';
 			}
-			int b;
 
-			if (a == 0)
+
+	}while(res=='s');
+	res='s';
+	if (a == 0)
 			{
 				cout << "Introduzca El numero de productos que vende la pasteleria" << endl;
 
 				cin >> b; //Linea de código donde salta el error
 			}
-			int bb = b;
-			string nombre_art[bb], st = "mkdck";
-			float precio[bb][2], pr = 0.0;
-			int inventario[bb];
+
+	bb = b;
+	string nombre_art[bb], st = "mkdck";
+	float precio[bb][2], pr = 0.0;
+	int inventario[bb];
+	do{
+
+
+
 
 			for (i = 0; i < b; i++)
 			{
@@ -106,16 +113,16 @@ int main()
 
 				if (ResI == 1)
 				{
-					MI = 2;
+
 					cout << " Nombre  Precio al Mayor   Precio al detal  Existencias  " << endl;
 				cout << "------  ---------------   ---------------  -----------" << endl;
 
-				for (i = 0; i < b; i++)
+				for (i = 0; i < bb; i++)
 				{
 					cout << nombre_art[i] << "      " << precio[i][0] << "         " << precio[i][1] << "        " << inventario[i] << endl;
 
 
-			}
+			     }
 				}
 				else
 				{
@@ -135,21 +142,72 @@ int main()
 
 				break;
 			}
+
 			}
 
-		/*case 2:
 
-			cout << "---------------------" << endl;
-			cout << "|      Tienda       |" << endl;
-			cout << "|                   |" << endl;
-			cout << "---------------------" << endl;
-			cout << "" << endl;
-			cout << "" << endl;
-			break;
-		}*/
 
-	}
 
-}while (res == 's');
+
+
+	}while (res == 's');
+
+
+
+while(j==0){
+    cout << "---------------------" << endl;
+    cout << "|      Tienda       |" << endl;
+    cout << "|                   |" << endl;
+    cout << "---------------------" << endl;
+    cout << "" << endl;
+    cout << "" << endl;
+
+    cout<<"Nombre del cliente"<<endl;
+    cin>>nombre;
+    cout<<"Cedula del cliente"<<endl;
+    cin>>cedula;
+    cout<<"Numero de telefono"<<endl;
+    cin>>telf;
+
+    cout<<"    Compras "<<endl;
+    cout<<"-------------"<<endl;
+
+    cout<<"Ingrese el numero del articulo"<<endl;
+    cout<<"_____________________________"<<endl;
+    for(i=0;i<(b/2);i++){
+        cout<<"|"<<nombre[i]<<" numero"<<i+1<<" :Precio al detal"<<precio[i][0]<<" precio al mayor:"<<precio[i][1]<<"|"<<endl;
+    }
+    cout<<"_____________________________"<<endl;
+
+    while(j==0){
+        cin>>number;
+        cout<<"Ingrese el numero de unidades a llevar"<<endl;
+        cin>>nm;
+
+       if (nm<inventario[number-1]){
+		    if(nm>12){
+            total=precio[number-1][1]*nm;
+            inventario[number-1]-=nm;
+            total_t=total;
+        }
+        else{
+            total=precio[number-1][0]*nm;
+            inventario[number-1]-=nm;
+            total_t=total;
+        }
+	   }else{
+		   cout<<"Es incorrecta esa cantidad solo se le quedan disponibles "<<inventario[number-1]<<endl;
+	   }
+
+        cout<<"Ingrese 0 para llevar otro articulo"<<endl;
+        cin>>j;
+
+    }
+    cout<<"Total a pagar:"<<total<<endl;
+    cout<<"Total a pagar con iva:"<<total*1.12<<endl;
+
+    cout<<"Presione 0 para seguir vendiendo"<<endl;
+    cin>>j;
+}
 return 0;
 }
