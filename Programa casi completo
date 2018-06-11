@@ -147,6 +147,7 @@ int main(){
 	if(IoV==2){
 		x=-1;
 		do{
+		j=0;
 		z++;
 		x=x+1;	
 		cout<<endl;	
@@ -181,7 +182,7 @@ int main(){
 	    }
 	    cout<<"_____________________________"<<endl;
 	
-	    while(s==0){
+	    while(j==0){
 	    	cout<<"Ingrese el numero del articulo"<<endl;
 	        cin>>number;
 	        cout<<"Ingrese el numero de unidades a llevar"<<endl;
