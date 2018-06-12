@@ -190,7 +190,7 @@ int main(){
 	        cout<<"Ingrese el numero de unidades a llevar"<<endl;
 	        cin>>nm;
 
-	       if (nm<inventario[number-1]){
+	       if (nm<=inventario[number-1]){
 			    if(nm>12){
 	            total=precio[number-1][1]*nm;
 	            inventario[number-1]-=nm;
